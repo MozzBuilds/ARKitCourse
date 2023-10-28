@@ -16,6 +16,7 @@
 		A72A6CF02AED840B00093C90 /* ARDrawingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72A6CEF2AED840B00093C90 /* ARDrawingTests.swift */; };
 		A72A6CFA2AED840B00093C90 /* ARDrawingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72A6CF92AED840B00093C90 /* ARDrawingUITests.swift */; };
 		A72A6CFC2AED840B00093C90 /* ARDrawingUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72A6CFB2AED840B00093C90 /* ARDrawingUITestsLaunchTests.swift */; };
+		A72A6D092AED91D400093C90 /* pancakes.usdz in Resources */ = {isa = PBXBuildFile; fileRef = A72A6D082AED91D400093C90 /* pancakes.usdz */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		A72A6CF52AED840B00093C90 /* ARDrawingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ARDrawingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A72A6CF92AED840B00093C90 /* ARDrawingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARDrawingUITests.swift; sourceTree = "<group>"; };
 		A72A6CFB2AED840B00093C90 /* ARDrawingUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARDrawingUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A72A6D082AED91D400093C90 /* pancakes.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = pancakes.usdz; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				A72A6CD82AED840A00093C90 /* AppDelegate.swift */,
 				A72A6CDA2AED840A00093C90 /* SceneDelegate.swift */,
 				A72A6CDC2AED840A00093C90 /* ViewController.swift */,
+				A72A6D082AED91D400093C90 /* pancakes.usdz */,
 				A72A6CDE2AED840A00093C90 /* Main.storyboard */,
 				A72A6CE12AED840B00093C90 /* Assets.xcassets */,
 				A72A6CE32AED840B00093C90 /* LaunchScreen.storyboard */,
@@ -234,6 +237,7 @@
 				A72A6CE52AED840B00093C90 /* LaunchScreen.storyboard in Resources */,
 				A72A6CE22AED840B00093C90 /* Assets.xcassets in Resources */,
 				A72A6CE02AED840A00093C90 /* Main.storyboard in Resources */,
+				A72A6D092AED91D400093C90 /* pancakes.usdz in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

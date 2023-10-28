@@ -22,9 +22,19 @@ class ViewController: UIViewController {
             /// Shows FPS, performance
         sceneView.session.run(configuration)
         sceneView.delegate = self
+        sceneView.autoenablesDefaultLighting = true
+
     }
 
-
+    
+    @IBAction func pancakeButtonTapped(_ sender: Any) {
+        let pancakesURL = Bundle.main.url(forResource: "pancakes", withExtension: "usdz")!
+        let pancakes = SCNReferenceNode(url: pancakesURL)!
+        
+        // Doesn't work. Seems to, but doesn't. Probably not the right way
+        sceneView.scene.rootNode.addChildNode(pancakes)
+    }
+    
     @IBAction func drawButtonTapped(_ sender: Any) {
         
     }
