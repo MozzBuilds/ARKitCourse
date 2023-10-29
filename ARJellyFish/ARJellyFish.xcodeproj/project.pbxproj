@@ -1,0 +1,441 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		50201FCC2EA011EFB0A6C491 /* Pods_ARJellyFish.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4753C95E1E04C155119B8AD1 /* Pods_ARJellyFish.framework */; };
+		A72A6D532AEDB86D00093C90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72A6D522AEDB86D00093C90 /* AppDelegate.swift */; };
+		A72A6D552AEDB86D00093C90 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72A6D542AEDB86D00093C90 /* SceneDelegate.swift */; };
+		A72A6D572AEDB86D00093C90 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72A6D562AEDB86D00093C90 /* ViewController.swift */; };
+		A72A6D5A2AEDB86D00093C90 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A72A6D582AEDB86D00093C90 /* Main.storyboard */; };
+		A72A6D5C2AEDB86E00093C90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A72A6D5B2AEDB86E00093C90 /* Assets.xcassets */; };
+		A72A6D5F2AEDB86E00093C90 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A72A6D5D2AEDB86E00093C90 /* LaunchScreen.storyboard */; };
+		A72A6D672AEDBC4A00093C90 /* Jellyfish.dae in Resources */ = {isa = PBXBuildFile; fileRef = A72A6D662AEDBC4A00093C90 /* Jellyfish.dae */; };
+		A72A6D6A2AEDBC5700093C90 /* Jellyfish.png in Resources */ = {isa = PBXBuildFile; fileRef = A72A6D692AEDBC5700093C90 /* Jellyfish.png */; };
+		A72A6D6C2AEDBC6C00093C90 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = A72A6D6B2AEDBC6C00093C90 /* art.scnassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4753C95E1E04C155119B8AD1 /* Pods_ARJellyFish.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ARJellyFish.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		66520BA0CF1B8ED1997D7D0B /* Pods-ARJellyFish.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARJellyFish.release.xcconfig"; path = "Target Support Files/Pods-ARJellyFish/Pods-ARJellyFish.release.xcconfig"; sourceTree = "<group>"; };
+		A72A6D4F2AEDB86D00093C90 /* ARJellyFish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARJellyFish.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A72A6D522AEDB86D00093C90 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A72A6D542AEDB86D00093C90 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		A72A6D562AEDB86D00093C90 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A72A6D592AEDB86D00093C90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A72A6D5B2AEDB86E00093C90 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A72A6D5E2AEDB86E00093C90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A72A6D602AEDB86E00093C90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A72A6D662AEDBC4A00093C90 /* Jellyfish.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = Jellyfish.dae; sourceTree = "<group>"; };
+		A72A6D692AEDBC5700093C90 /* Jellyfish.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Jellyfish.png; sourceTree = "<group>"; };
+		A72A6D6B2AEDBC6C00093C90 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
+		BA6805E7DAA55D4F02A97164 /* Pods-ARJellyFish.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARJellyFish.debug.xcconfig"; path = "Target Support Files/Pods-ARJellyFish/Pods-ARJellyFish.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A72A6D4C2AEDB86D00093C90 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50201FCC2EA011EFB0A6C491 /* Pods_ARJellyFish.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2D032C6E9B50E5F66234415E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BA6805E7DAA55D4F02A97164 /* Pods-ARJellyFish.debug.xcconfig */,
+				66520BA0CF1B8ED1997D7D0B /* Pods-ARJellyFish.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		8DE4C93950C0766589BB5F58 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4753C95E1E04C155119B8AD1 /* Pods_ARJellyFish.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A72A6D462AEDB86D00093C90 = {
+			isa = PBXGroup;
+			children = (
+				A72A6D512AEDB86D00093C90 /* ARJellyFish */,
+				A72A6D502AEDB86D00093C90 /* Products */,
+				2D032C6E9B50E5F66234415E /* Pods */,
+				8DE4C93950C0766589BB5F58 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		A72A6D502AEDB86D00093C90 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A72A6D4F2AEDB86D00093C90 /* ARJellyFish.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A72A6D512AEDB86D00093C90 /* ARJellyFish */ = {
+			isa = PBXGroup;
+			children = (
+				A72A6D522AEDB86D00093C90 /* AppDelegate.swift */,
+				A72A6D542AEDB86D00093C90 /* SceneDelegate.swift */,
+				A72A6D6B2AEDBC6C00093C90 /* art.scnassets */,
+				A72A6D682AEDBC5700093C90 /* Textures */,
+				A72A6D662AEDBC4A00093C90 /* Jellyfish.dae */,
+				A72A6D562AEDB86D00093C90 /* ViewController.swift */,
+				A72A6D582AEDB86D00093C90 /* Main.storyboard */,
+				A72A6D5B2AEDB86E00093C90 /* Assets.xcassets */,
+				A72A6D5D2AEDB86E00093C90 /* LaunchScreen.storyboard */,
+				A72A6D602AEDB86E00093C90 /* Info.plist */,
+			);
+			path = ARJellyFish;
+			sourceTree = "<group>";
+		};
+		A72A6D682AEDBC5700093C90 /* Textures */ = {
+			isa = PBXGroup;
+			children = (
+				A72A6D692AEDBC5700093C90 /* Jellyfish.png */,
+			);
+			path = Textures;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A72A6D4E2AEDB86D00093C90 /* ARJellyFish */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A72A6D632AEDB86E00093C90 /* Build configuration list for PBXNativeTarget "ARJellyFish" */;
+			buildPhases = (
+				21F33DE879718D015DBB3A04 /* [CP] Check Pods Manifest.lock */,
+				A72A6D4B2AEDB86D00093C90 /* Sources */,
+				A72A6D4C2AEDB86D00093C90 /* Frameworks */,
+				A72A6D4D2AEDB86D00093C90 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ARJellyFish;
+			productName = ARJellyFish;
+			productReference = A72A6D4F2AEDB86D00093C90 /* ARJellyFish.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A72A6D472AEDB86D00093C90 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					A72A6D4E2AEDB86D00093C90 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = A72A6D4A2AEDB86D00093C90 /* Build configuration list for PBXProject "ARJellyFish" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A72A6D462AEDB86D00093C90;
+			productRefGroup = A72A6D502AEDB86D00093C90 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A72A6D4E2AEDB86D00093C90 /* ARJellyFish */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A72A6D4D2AEDB86D00093C90 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A72A6D6A2AEDBC5700093C90 /* Jellyfish.png in Resources */,
+				A72A6D6C2AEDBC6C00093C90 /* art.scnassets in Resources */,
+				A72A6D5F2AEDB86E00093C90 /* LaunchScreen.storyboard in Resources */,
+				A72A6D5C2AEDB86E00093C90 /* Assets.xcassets in Resources */,
+				A72A6D5A2AEDB86D00093C90 /* Main.storyboard in Resources */,
+				A72A6D672AEDBC4A00093C90 /* Jellyfish.dae in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		21F33DE879718D015DBB3A04 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ARJellyFish-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A72A6D4B2AEDB86D00093C90 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A72A6D572AEDB86D00093C90 /* ViewController.swift in Sources */,
+				A72A6D532AEDB86D00093C90 /* AppDelegate.swift in Sources */,
+				A72A6D552AEDB86D00093C90 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A72A6D582AEDB86D00093C90 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A72A6D592AEDB86D00093C90 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A72A6D5D2AEDB86E00093C90 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A72A6D5E2AEDB86E00093C90 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A72A6D612AEDB86E00093C90 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A72A6D622AEDB86E00093C90 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A72A6D642AEDB86E00093C90 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA6805E7DAA55D4F02A97164 /* Pods-ARJellyFish.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UARL983TF6;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ARJellyFish/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com-MozzBuilds.ARWorldTracking";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A72A6D652AEDB86E00093C90 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 66520BA0CF1B8ED1997D7D0B /* Pods-ARJellyFish.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UARL983TF6;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ARJellyFish/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com-MozzBuilds.ARWorldTracking";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A72A6D4A2AEDB86D00093C90 /* Build configuration list for PBXProject "ARJellyFish" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A72A6D612AEDB86E00093C90 /* Debug */,
+				A72A6D622AEDB86E00093C90 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A72A6D632AEDB86E00093C90 /* Build configuration list for PBXNativeTarget "ARJellyFish" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A72A6D642AEDB86E00093C90 /* Debug */,
+				A72A6D652AEDB86E00093C90 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A72A6D472AEDB86D00093C90 /* Project object */;
+}
