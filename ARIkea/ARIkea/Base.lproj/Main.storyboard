@@ -60,13 +60,21 @@
                             <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lTy-qO-zAz">
                                 <rect key="frame" x="0.0" y="59" width="393" height="684"/>
                             </arscnView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plane Detected" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sdW-3H-qbn">
+                                <rect key="frame" x="138" y="69" width="117" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6IA-3s-v52" secondAttribute="trailing" id="65i-wJ-fID"/>
                             <constraint firstItem="lTy-qO-zAz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6y4-cI-8ab"/>
+                            <constraint firstItem="sdW-3H-qbn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="93c-6S-N8u"/>
                             <constraint firstItem="lTy-qO-zAz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Kl6-ex-5Q4"/>
+                            <constraint firstItem="sdW-3H-qbn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LQu-N7-BI8"/>
                             <constraint firstItem="6IA-3s-v52" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="MER-5b-vEo"/>
                             <constraint firstItem="6IA-3s-v52" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="iSE-gS-Scn"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lTy-qO-zAz" secondAttribute="trailing" id="psc-Wu-Hiu"/>
@@ -75,6 +83,7 @@
                     </view>
                     <connections>
                         <outlet property="collectionVIew" destination="6IA-3s-v52" id="toL-H8-7OZ"/>
+                        <outlet property="planeDetectedLabel" destination="sdW-3H-qbn" id="5Rd-Td-7v8"/>
                         <outlet property="sceneView" destination="lTy-qO-zAz" id="8PD-dW-gIv"/>
                     </connections>
                 </viewController>
