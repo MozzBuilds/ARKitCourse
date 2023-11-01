@@ -1,11 +1,11 @@
 {
   "images" : [
     {
-      "filename" : "lava.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "concrete.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
