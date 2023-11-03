@@ -18,6 +18,10 @@ class ViewController: UIViewController {
     let motionManager = CMMotionManager()
     var vehicle = SCNPhysicsVehicle()
     var orientation: CGFloat = 0
+    var accelerationValues = [UIAccelerationValue(0), UIAccelerationValue(0)]
+    
+    var touched = 0
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +35,18 @@ class ViewController: UIViewController {
         sceneView.showsStatistics = true
         
         setUpAccelerometer()
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        /// Triggered whenever the user touches the screen of the phone
+        guard touches.first != nil else { return } // If there is at least 1 finger touching the screen
+        
+        touched += touches.count // How many fingers are touching the screen
+    }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        /// Triggered whenever the user releases their tap
+        touched = 0
     }
     
     func createConcrete(planeAnchor: ARPlaneAnchor) -> SCNNode {
@@ -75,7 +91,7 @@ class ViewController: UIViewController {
         let currentPositionOfCamera = orientation + location
         
         /// Add tge cystin scene and car object
-        let scene = SCNScene(named: "VehicleScene")!
+        let scene = SCNScene(named: "VehicleScene.scn")!
         let frameNode = scene.rootNode.childNode(withName: "frame", recursively: false)!
         
         /// Declare the wheel nodes
@@ -96,6 +112,10 @@ class ViewController: UIViewController {
         /// The box needs physics so it can fall/move. It needs to be affected by gravity and will fall onto the horiontal plane
         /// Want to keep it as a compoint, as we want this box node to have different affects than we do e.g. the wheels
         let body = SCNPhysicsBody(type: .dynamic, shape: SCNPhysicsShape(node: frameNode, options: [.keepAsCompound: true]))
+        
+        /// Mass of the car, in Newtons. Default is 1N which is very light so a small force moves it very fast
+        /// Setting to 5N will make it much slower
+        body.mass = 5
         frameNode.physicsBody = body
         
         /// Create the vehicle. The wheels should now move and rotate
@@ -137,7 +157,27 @@ class ViewController: UIViewController {
     
     func accelerometerDidChange(acceleration: CMAcceleration) {
         /// Acceleration contains an x and value which gives the acceleration split on a scale from 0 to 1
-        orientation = acceleration.y
+        /// To determine which way the phone is facing, we need to use the acceleration data. If we don't, and just set orientation to acceleration.y, then the vehicle behaves differently depending if the phone is held horizontally with the camera on the left, versus if it was on the right
+        /// One is negative, one is positive
+        
+        /// By default, the acceleration applied includes gravity, thiscan be filtered to better represent how the phone is oriented, for a smoother acceleration
+        /// This isn't necessary, but it helps with the user interaction.
+        accelerationValues[1] = filtered(currentAcceleration: accelerationValues[1], updatedAcceleration: acceleration.y) //Vertical
+        accelerationValues[0] = filtered(currentAcceleration: accelerationValues[0], updatedAcceleration: acceleration.x) // Horizontal
+
+        /// If horizontal acceleration dut to gravity is positive, set orientation to the negative of the vertical acceleration
+        if  accelerationValues[0] > 0 {
+            orientation = -accelerationValues[1]
+        } else {
+            orientation = accelerationValues[1]
+        }
+    }
+    
+    func filtered(currentAcceleration: Double, updatedAcceleration: Double) -> Double {
+        /// Takes in two accelerations due to gravity
+        
+        let kFilteringFactor = 0.5
+        return updatedAcceleration*kFilteringFactor + currentAcceleration*(1 - kFilteringFactor)
     }
 }
 
@@ -190,9 +230,30 @@ extension ViewController: ARSCNViewDelegate {
         
         /// Set the steering angle to depend on the phones orientation (and so, acceleration)
         /// Set the wheels as the wheels positions in the array. The wheels must match the position of the front wheels, which for this example is position 3 and 4, so index 2 and 3
-        vehicle.setSteeringAngle(orientation, forWheelAt: 2)
-        vehicle.setSteeringAngle(orientation, forWheelAt: 3)
+        /// The negative orientation for the steering angle depends on if the car starts facing us , or faces away from us`
+        vehicle.setSteeringAngle(-orientation, forWheelAt: 2)
+        vehicle.setSteeringAngle(-orientation, forWheelAt: 3)
 
+        /// Aplpy the engine force to the back wheels
+        var engineForce: CGFloat = 0 // Newtons
+        var brakingForce: CGFloat = 0
+        
+        switch touched {
+        case 1:
+            engineForce = 50
+            /// The other way to change the speed of the car, besides changing its mass, is to change the engine force. This is likely more useful to do if there's multiple objects with masses that may interact?
+        case 2:
+            engineForce = -50
+        case 3:
+            brakingForce = 150
+        default:
+            engineForce = 0
+        }
+        
+        vehicle.applyEngineForce(engineForce, forWheelAt: 0)
+        vehicle.applyEngineForce(engineForce, forWheelAt: 1)
+        vehicle.applyBrakingForce(brakingForce, forWheelAt: 0)
+        vehicle.applyBrakingForce(brakingForce, forWheelAt: 1)
     }
 }
 
