@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     let config = ARWorldTrackingConfiguration()
     let motionManager = CMMotionManager()
     var vehicle = SCNPhysicsVehicle()
+    var orientation: CGFloat = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +28,7 @@ class ViewController: UIViewController {
         
         sceneView.session.run(config)
         sceneView.delegate = self
+        sceneView.showsStatistics = true
         
         setUpAccelerometer()
     }
@@ -77,6 +79,7 @@ class ViewController: UIViewController {
         let frameNode = scene.rootNode.childNode(withName: "frame", recursively: false)!
         
         /// Declare the wheel nodes
+        /// The wheels are rotated 90 degrees to be vertical (WHY?), so we need to add them under a parent node which can be rotated but the wheels are not
         let frontLeft = frameNode.childNode(withName: "frontLeftParent", recursively: false)!
         let frontRight = frameNode.childNode(withName: "frontRightParent", recursively: false)!
         let rearLeft = frameNode.childNode(withName: "rearLeftParent", recursively: false)!
@@ -134,6 +137,7 @@ class ViewController: UIViewController {
     
     func accelerometerDidChange(acceleration: CMAcceleration) {
         /// Acceleration contains an x and value which gives the acceleration split on a scale from 0 to 1
+        orientation = acceleration.y
     }
 }
 
@@ -179,6 +183,16 @@ extension ViewController: ARSCNViewDelegate {
         node.enumerateChildNodes({ childNode,_ in
             childNode.removeFromParentNode()
         })
+    }
+    
+    func renderer(_ renderer: SCNSceneRenderer, didSimulatePhysicsAtTime time: TimeInterval) {
+        /// Called every frame, so 60fps
+        
+        /// Set the steering angle to depend on the phones orientation (and so, acceleration)
+        /// Set the wheels as the wheels positions in the array. The wheels must match the position of the front wheels, which for this example is position 3 and 4, so index 2 and 3
+        vehicle.setSteeringAngle(orientation, forWheelAt: 2)
+        vehicle.setSteeringAngle(orientation, forWheelAt: 3)
+
     }
 }
 
